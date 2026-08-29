@@ -156,7 +156,12 @@ footer .nuv { margin-left: auto; }
   .sched .mat { white-space: normal; }
   .sig .sem { display: none; }
 }
-/* ADA accent */ :root { --accent: #317e43; }
+
+/* upcoming sessions: greyed until revealed by publish.sh */
+.sched tr.future td { opacity: 0.5; }
+.sched tr.future .q a { pointer-events: none; }
+/* workshop subline under the session title */
+.sched .ws { display: block; font-family: var(--sans); font-style: normal; font-size: 0.8rem; color: var(--ink-2); margin-top: 0.1rem; }
 
 /* ---- primary navigation ---- */
 .nav { background: #fff; border-bottom: 1px solid var(--hair); }
@@ -164,11 +169,6 @@ footer .nuv { margin-left: auto; }
 .nav a { text-decoration: none; color: var(--ink-2); padding-block: 0.1rem; border-bottom: 2px solid transparent; }
 .nav a:hover { color: var(--hec); }
 .nav a[aria-current] { color: var(--hec-dark); font-weight: 700; border-bottom-color: var(--ublue); }
-
-
-/* upcoming sessions: greyed until revealed by publish.sh */
-.sched tr.future td { opacity: 0.5; }
-.sched tr.future .q a { pointer-events: none; }
 
 /* ---- liveness: status strip + expandable rows ---- */
 .pulse { margin-top: 1.1rem; max-width: 46rem; }
@@ -204,3 +204,5 @@ footer .nuv { margin-left: auto; }
 .btn.primary { background: var(--hec); color: #fff; }
 .btn:hover { background: var(--hec-dark); border-color: var(--hec-dark); color: #fff; }
 .nav a.ext::after { content: " ↗"; font-size: 0.8em; }
+
+:root { --accent: #317e43; }
