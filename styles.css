@@ -191,3 +191,16 @@ footer .nuv { margin-left: auto; }
 .sched tr.detail .d-body h4 { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--ink-2); margin: 0.7rem 0 0.25rem; }
 .sched tr.detail .d-mat .tba { color: var(--ink-2); }
 @media (prefers-reduced-motion: reduce) { .pulse .bar .fill, .sched tr.detail .d-wrap, .sched tr.expandable .q::before { transition: none; } }
+
+/* ---- Nuvolos band + buttons + external nav ---- */
+.nuvolos-band { background: #fff; border-bottom: 1px solid var(--hair); }
+.nuvolos-band .wrap { display: flex; align-items: center; gap: 1.6rem; padding-block: 1rem; flex-wrap: wrap; }
+.nuvolos-band img { height: 40px; display: block; }
+.nb-text { flex: 1; min-width: 16rem; font-size: 0.92rem; }
+.nb-text b { display: block; font-weight: 700; }
+.nb-text span { color: var(--ink-2); }
+.nb-actions { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+.btn { display: inline-block; padding: 0.5rem 1rem; border: 1px solid var(--hec); color: var(--hec); text-decoration: none; font-weight: 700; font-size: 0.9rem; }
+.btn.primary { background: var(--hec); color: #fff; }
+.btn:hover { background: var(--hec-dark); border-color: var(--hec-dark); color: #fff; }
+.nav a.ext::after { content: " ↗"; font-size: 0.8em; }

@@ -76,7 +76,7 @@ def shell(title, body, cur='', depth=0):
 <header class="sig"><div class="wrap">
 <img src="{p}assets/logos/unil-logo-blue.svg" alt="UNIL"><span class="fac">HEC Lausanne</span>
 <span class="sem">Autumn semester 2026</span></div></header>
-<nav class="nav"><div class="wrap">{nav('index','index.html','Schedule')}{nav('assessment','assessment.html','Assessment')}{nav('resources','resources.html','Python refresher &amp; resources')}</div></nav>
+<nav class="nav"><div class="wrap">{nav('index','index.html','Schedule')}{nav('assessment','assessment.html','Assessment')}{nav('resources','resources.html','Python refresher &amp; resources')}<a class="ext" href="https://moodle.unil.ch" target="_blank" rel="noopener">Moodle</a></div></nav>
 {body}
 <footer><div class="wrap"><img src="{p}assets/logos/unil-logo-white.svg" alt="UNIL">
 <span>HEC Lausanne · Autumn 2026</span><a href="mailto:anna.smirnova@unil.ch">Contact the team</a>
@@ -159,6 +159,11 @@ index_body = f'''<div class="mast"><div class="wrap"><h1>Advanced Data Analytics
 <section><h2>Prerequisites</h2><p>Python basics</p><p class="note"><a href="resources.html">Refresher notebooks</a> if you need them</p></section>
 <section><h2>Compute</h2><p><a href="https://nuvolos.cloud">Nuvolos</a> cloud workspaces</p><p class="note">Free for enrolled students</p></section>
 </div></div>
+<section class="nuvolos-band"><div class="wrap">
+  <img src="assets/logos/nuvolos.svg" alt="Nuvolos">
+  <div class="nb-text"><b>Your workspace runs on Nuvolos.</b><span>VS Code and JupyterLab in the browser — nothing to install. Enroll with your UNIL email once; then log in from any computer.</span></div>
+  <div class="nb-actions"><!-- ENROLL: replace href with the ADA space invitation link --><a class="btn primary" href="https://app.nuvolos.cloud">Enroll in the course space</a><a class="btn" href="https://app.nuvolos.cloud">Log in</a></div>
+</div></section>
 <main><div class="wrap"><h2 class="sect">Schedule</h2>
 <p style="margin-bottom:0.9rem;color:var(--ink-2);font-size:0.93rem">Dates are the provisional 2026 calendar; materials are the current course corpus and may be updated week by week.</p>
 <table class="sched"><thead><tr><th>#</th><th>Date</th><th>Topic</th><th>Materials</th></tr></thead><tbody>
@@ -171,6 +176,7 @@ assess_body = '''<div class="wk-mast"><div class="wrap"><p class="crumb"><a href
 <main><div class="wrap"><dl class="mats">
 <div class="row"><dt>Project</dt><dd>Final project, presented in the last session<span class="ms">A GitHub repository is required. Deadline and format announced at semester start.</span></dd></div>
 <div class="row"><dt>Exercises</dt><dd>Exercise sheets and finger exercises with the TA<span class="ms">Practice, discussed in the practice sessions.</span></dd></div>
+<div class="row"><dt>Also on Moodle</dt><dd>Everything on this page is posted on the course Moodle as well<span class="ms">Exam and project announcements are published on Moodle and here at the same time. If the two ever differ, Moodle is the official channel.</span></dd></div>
 <div class="row"><dt>Binding terms</dt><dd>The study plan<span class="ms">In the event of an appeal, only the study plan (plan d'études) is binding. This page summarizes the intended terms.</span></dd></div>
 </dl><nav class="pager"><a href="index.html"><span class="lbl">← Back</span><b>Schedule</b></a></nav></div></main>'''
 (ROOT/'assessment.html').write_text(shell('Assessment', assess_body, cur='assessment'))
