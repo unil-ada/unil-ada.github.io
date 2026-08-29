@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <!-- Background -->
+  <rect width="200" height="60" fill="#ffffff" stroke="#2563eb" stroke-width="2" rx="4"/>
+  
+  <!-- UNIL Text -->
+  <text x="20" y="25" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2563eb">UNIL</text>
+  
+  <!-- University of Lausanne Text -->
+  <text x="20" y="42" font-family="Arial, sans-serif" font-size="10" fill="#6b7280">University of Lausanne</text>
+  
+  <!-- Decorative Element -->
+  <circle cx="170" cy="30" r="12" fill="#2563eb" opacity="0.1"/>
+  <circle cx="170" cy="30" r="8" fill="#2563eb" opacity="0.3"/>
+  <circle cx="170" cy="30" r="4" fill="#2563eb"/>
+</svg>

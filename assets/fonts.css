@@ -1,0 +1,38 @@
+/* UNIL brand kit — fonts + colors for the course websites.
+   Source: brandbook-unil.ch. Fallbacks per the official readme: Arial / Georgia. */
+
+@font-face { font-family: "Unil Sans"; src: url("fonts/UnilSans-Light.woff2") format("woff2"); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: "Unil Sans"; src: url("fonts/UnilSans-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Unil Sans"; src: url("fonts/UnilSans-Italic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "Unil Sans"; src: url("fonts/UnilSans-Bold.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Unil Sans"; src: url("fonts/UnilSans-BoldItalic.woff2") format("woff2"); font-weight: 700; font-style: italic; font-display: swap; }
+@font-face { font-family: "Unil Serif"; src: url("fonts/UnilSerif-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Unil Serif"; src: url("fonts/UnilSerif-Italic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "Unil Serif"; src: url("fonts/UnilSerif-Bold.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+
+:root {
+  /* brandbook values — do not invent shades */
+  --u-blue: #0066ff;
+  --u-blue-dark: #002664;
+  --u-blue-light: #8ce0ff;
+  --u-orange: #ff6600;
+  --u-orange-dark: #941b00;
+  --u-orange-light: #ffce99;
+
+  /* HEC Lausanne faculty palette (brandbook, chapter Facultés).
+     Faculty colors lead on faculty sites; institutional blues accent. */
+  --hec-primary: #395b8c;
+  --hec-dark: #1e2b3e;
+  --hec-light: #3578b4;
+  --hec-red: #e73952;
+  --hec-gold: #fab52a;
+  --hec-green: #317e43;
+  --hec-pink: #f499b3;
+
+  --u-sans: "Unil Sans", Arial, sans-serif;
+  --u-serif: "Unil Serif", Georgia, serif;
+}
+
+/* Unil Sans/Serif ship tabular figures — use them wherever numbers align
+   in columns (schedule tables, grades, dates). */
+.tnum { font-feature-settings: "tnum" 1; }
