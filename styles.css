@@ -87,7 +87,7 @@ table.sched { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
 /* current week: the page's one circle */
 .sched tr.now td { background: var(--hec-tint); }
 .sched tr.now .wk { color: var(--hec); font-weight: 700; }
-.sched tr.now .wk::before {
+.sched tr.now td.wk:first-child::before {
   content: ""; display: inline-block; width: 0.55em; height: 0.55em;
   border-radius: 50%; background: var(--accent); margin-right: 0.45em;
 }
@@ -169,3 +169,25 @@ footer .nuv { margin-left: auto; }
 /* upcoming sessions: greyed until revealed by publish.sh */
 .sched tr.future td { opacity: 0.5; }
 .sched tr.future .q a { pointer-events: none; }
+
+/* ---- liveness: status strip + expandable rows ---- */
+.pulse { margin-top: 1.1rem; max-width: 46rem; }
+.pulse-row { display: flex; flex-wrap: wrap; gap: 0.3rem 1.2rem; align-items: baseline; font-size: 0.92rem; }
+.pulse-row b { font-weight: 700; }
+.pulse-row span { opacity: 0.9; font-weight: 300; }
+.pulse .bar { height: 4px; background: rgba(255,255,255,0.28); margin-top: 0.55rem; }
+.pulse .bar .fill { height: 100%; background: var(--accent); transition: width 0.9s cubic-bezier(0.22,1,0.36,1); }
+.sched tr.expandable { cursor: pointer; }
+.sched tr.expandable:hover td { background: var(--hec-tint); }
+.sched tr.expandable .q::before { content: "▸"; display: inline-block; width: 1.1em; color: var(--ink-3, var(--ink-2)); font-family: var(--sans); font-style: normal; font-size: 0.8em; transition: transform 0.25s cubic-bezier(0.22,1,0.36,1); }
+.sched tr.expandable.open .q::before { transform: rotate(90deg); }
+.sched tr.detail td { padding: 0; border-bottom: 0; background: #fff; }
+.sched tr.detail .d-wrap { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.35s cubic-bezier(0.22,1,0.36,1); }
+.sched tr.detail.open .d-wrap { grid-template-rows: 1fr; }
+.sched tr.detail .d-in { overflow: hidden; }
+.sched tr.detail .d-body { padding: 1rem 1.2rem 1.2rem 3.2rem; border-bottom: 1px solid var(--hair); border-left: 3px solid var(--accent); font-size: 0.93rem; line-height: 1.5; }
+.sched tr.detail .d-body p { margin: 0 0 0.5rem; }
+.sched tr.detail .d-body ul { margin: 0.2rem 0 0.6rem 1.1rem; padding: 0; }
+.sched tr.detail .d-body h4 { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--ink-2); margin: 0.7rem 0 0.25rem; }
+.sched tr.detail .d-mat .tba { color: var(--ink-2); }
+@media (prefers-reduced-motion: reduce) { .pulse .bar .fill, .sched tr.detail .d-wrap, .sched tr.expandable .q::before { transition: none; } }

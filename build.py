@@ -81,7 +81,7 @@ def shell(title, body, cur='', depth=0):
 <footer><div class="wrap"><img src="{p}assets/logos/unil-logo-white.svg" alt="UNIL">
 <span>HEC Lausanne · Autumn 2026</span><a href="mailto:anna.smirnova@unil.ch">Contact the team</a>
 <span class="nuv"><!-- Nuvolos branding required (free compute credits) — do not remove -->Compute by <a href="https://nuvolos.cloud">Nuvolos</a></span></div></footer>
-</body></html>'''
+<script src="{p}site.js"></script></body></html>'''
 
 def page(title, inner, crumb=''):
     body = f'''<div class="wk-mast"><div class="wrap"><p class="crumb"><a href="../../index.html">Advanced Data Analytics</a> · {html.escape(crumb)}</p>
@@ -123,10 +123,19 @@ for i, path in enumerate(DEFS):
         (MAT/f'week-{wk:02d}'/'index.html').write_text(page(f'Week {wk}: {title}', inner, crumb=f'Week {wk}'))
     mat_cell = (f'<a href="materials/week-{wk:02d}/index.html">Materials</a>' if groups
                 else '<span class="tba">—</span>')
-    cls = ' class="exam"' if 'wrap-up' in title.lower() or 'presentation' in title.lower() else ''
+    cls = 'session exam' if ('wrap-up' in title.lower() or 'presentation' in title.lower()) else 'session'
     q = html.escape(title) if not noclass else 'No class — Swiss federal fast (holiday)'
-    rows.append(f'<tr{cls}><td class="wk">{wk:02d}</td><td class="wk">{date.strftime("%b %-d")}</td>'
+    skip = ' data-skip="1"' if noclass else ''
+    rows.append(f'<tr class="{cls}" id="s{wk:02d}" data-date="{date.isoformat()}"{skip}><td class="wk">{wk:02d}</td><td class="wk">{date.strftime("%b %-d")}</td>'
                 f'<td class="q">{q}</td><td class="mat">{mat_cell}</td></tr>')
+    # detail row: week body (objectives/topics) via pandoc + materials mirror
+    body_md = re.sub(r'^---\n.*?\n---\n', '', path.read_text(), flags=re.S)
+    body_md = re.sub(r'^## .*\n', '', body_md, count=1, flags=re.M)
+    body_html = subprocess.run(['pandoc','-f','markdown','-t','html'], input=body_md, capture_output=True, text=True).stdout
+    body_html = body_html.replace('<h3', '<h4').replace('</h3>', '</h4>')
+    body_html = re.sub(r'<h4[^>]*>Schedule</h4>\s*<ul>.*?</ul>', '', body_html, flags=re.S)  # 2025 dates
+    if not noclass:
+        rows.append(f'<tr class="detail"><td colspan="4"><div class="d-wrap"><div class="d-in"><div class="d-body">{body_html}<h4>Materials</h4><div class="d-mat"></div></div></div></div></td></tr>')
 
 # ---- refresher page (Simon's 12 notebooks → HTML)
 ref = ROOT/'refresher'; ref.mkdir(exist_ok=True)
