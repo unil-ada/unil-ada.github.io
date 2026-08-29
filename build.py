@@ -131,10 +131,15 @@ for i, path in enumerate(DEFS):
 # ---- refresher page (Simon's 12 notebooks → HTML)
 ref = ROOT/'refresher'; ref.mkdir(exist_ok=True)
 ref_items = []
-for nb in sorted((SUB/'python_refresher').glob('*.ipynb'), key=lambda p:(len(p.stem), p.stem)):
+def _num(p):
+    m = re.search(r'python_basics_(\d+)', p.stem)
+    return int(m.group(1)) if m else 0
+for nb in sorted((SUB/'python_refresher').glob('*.ipynb'), key=_num):
     dest = ref/nb.name; shutil.copy2(nb, dest); out = convert(dest)
-    nice = nb.stem.replace('python_basics_','').replace('_',' ')
-    ref_items.append(f'<div class="row"><dt></dt><dd><a href="refresher/{out.name}">{html.escape(nice)}</a></dd></div>')
+    n = _num(nb)
+    nice = re.sub(r'^python_basics_\d+_', '', nb.stem).replace('_',' ')
+    label = f'{n:02d}' if n else 'start'
+    ref_items.append(f'<div class="row"><dt>{label}</dt><dd><a href="refresher/{out.name}">{html.escape(nice)}</a></dd></div>')
 
 # ---- top pages
 index_body = f'''<div class="mast"><div class="wrap"><h1>Advanced Data Analytics</h1>
