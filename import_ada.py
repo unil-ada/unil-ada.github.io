@@ -6,12 +6,14 @@ from pathlib import Path
 import yaml
 
 ROOT = Path(__file__).parent
-SRC  = Path.home()/'Projects/research/AP2025/ada-course-materials'
+SRC  = Path.home()/'Projects/teaching/ada-materials'
 DEFS = sorted((SRC/'content/week-definitions').glob('week*.md'))
 SUB  = SRC/'docs/advanced_data_analytics_2025'
+# URL path written inside Simon's week-definition front matter, from the old
+# Jekyll site. NOT a directory name — do not rename it with the folder.
 PREFIX = '/ada-course-materials/advanced_data_analytics_2025/'
 NBC = str(Path.home()/'.local/bin/jupyter-nbconvert')
-GEN = Path.home()/'Projects/research/AP2025/dsap-materials/tools/coursesite/build.py'
+GEN = Path.home()/'Projects/teaching/dsap-materials/tools/coursesite/build.py'
 MAT = ROOT/'materials'
 DATA_EXT = {'.gz','.zip','.tar','.pkl','.ubyte','.npz','.h5','.parquet','.7z'}
 d0 = dt.date(2026,9,14); DATES = [d0 + dt.timedelta(weeks=i) for i in range(14)]
