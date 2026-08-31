@@ -131,7 +131,10 @@ publication without their name.
 ## 8. Questions
 
 8.1 Questions about these requirements are directed to the teaching
-assistants: **[TA name] ([email])** and **[TA name] ([email])**.
+assistant, **Anna Smirnova** (anna.smirnova@unil.ch).
+
+8.2 The course is taught by **Prof. Dimitrios Karyampas**
+(dimitrios.karyampas@unil.ch).
 
 ---
 
@@ -143,7 +146,6 @@ assistants: **[TA name] ([email])** and **[TA name] ([email])**.
   TAs. At this cohort size email loses files, has no timestamp anyone can
   audit, and gives no receipt to the student. Moodle solves all three and
   is where an appeal will look. Confirm the assignment is created.
-- **TA names and addresses.**
 - **Clause 7** is new. It exists because a project gallery cannot be built
   from work submitted without permission to publish it. Consent must be
   collected in the same act as submission, this year — it cannot be

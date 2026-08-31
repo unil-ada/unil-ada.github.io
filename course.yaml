@@ -16,7 +16,7 @@ schedule_note: Dates are the provisional 2026 calendar; materials are the curren
 facts:
 - h: Meets
   p: Mondays, from 14 September
-  note: '[TIME] · [ROOM] · 2026 dates provisional'
+  note: Time and room confirmed before the first session · 2026 dates provisional
 - h: Grading
   p: Final project
   note: Details confirmed at semester start
@@ -32,17 +32,14 @@ nuvolos:
   blurb: VS Code and JupyterLab in the browser — nothing to install. Enroll with your UNIL email once;
     then log in from any computer.
 team:
-- name: '[LECTURER]'
+- name: Dimitrios Karyampas
   role: Lecturer
-  email: ''
-  note: Lectures and the project.
+  email: dimitrios.karyampas@unil.ch
+  note: Lectures, and the project.
 - name: Anna Smirnova
   role: Teaching assistant
   email: anna.smirnova@unil.ch
   note: Practice sessions, materials, and project sign-off.
-- name: '[TA 2]'
-  role: Teaching assistant
-  email: ''
 team_note: Project proposals and questions about the requirements go to the teaching assistants.
 assessment_html: assessment.html.frag
 resources_html: resources.html.frag
