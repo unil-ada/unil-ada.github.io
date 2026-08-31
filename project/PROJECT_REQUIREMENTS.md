@@ -61,7 +61,7 @@ used only to notify the teaching team, as set out in 4.11.
 4.2 The repository **shall** contain:
 
   a. a **research paper** in PDF;
-  b. the **data** used, or, where 4.9 applies, the code and instructions
+  b. the **data** used, or, where 4.15 applies, the code and instructions
      that obtain it;
   c. the **source code** that produces the results;
   d. a **recording** of approximately **15 minutes** presenting the
@@ -88,27 +88,50 @@ provided with this document.
 
 4.6 Further sections **may** be added where the project warrants them.
 
+### How the repository is organised
+
+4.7 The repository **shall** be organised so that each stage of the work
+can be found and run on its own: obtaining the data, preparing it,
+analysing it, and producing the figures and tables that appear in the
+paper.
+
+4.8 **No single file may contain the whole analysis.** A notebook
+**shall** cover one stage, and **shall** run from top to bottom in a
+freshly started kernel.
+
+4.9 Code used in more than one place **shall** live in a Python module
+(`.py`) and be imported where it is needed, rather than copied.
+
+4.10 The repository **shall** contain a file listing the packages
+required to run the code.
+
+4.11 Every figure and table in the paper **shall** be produced by code in
+the repository. Results that cannot be regenerated are not evidence.
+
+4.12 The repository **shall not** contain caches, checkpoints, virtual
+environments, editor settings, or other files unrelated to the project.
+
 ### Identification
 
-4.7 The GitHub account used **shall** display the student's **full name**
+4.13 The GitHub account used **shall** display the student's **full name**
 as registered at the University, in the account's profile name.
 
-4.8 A submission from an account that cannot be matched to a registered
+4.14 A submission from an account that cannot be matched to a registered
 student is **not graded**. The teaching team is not required to guess who
 an account belongs to, and a pseudonymous account with no full name is
 the student's own failure to submit identifiably.
 
 ### Access and timing
 
-4.9 Where licence or size prevents including the data itself, the
+4.15 Where licence or size prevents including the data itself, the
 repository **shall** contain the code and instructions by which the data
 can be obtained, together with a statement of the licence.
 
-4.10 The repository **shall** be **[private, with the teaching assistant
+4.16 The repository **shall** be **[private, with the teaching assistant
 added as a collaborator]**, and **shall** remain accessible to the
 teaching team until the grade is final.
 
-4.11 By the deadline in 2.2 the student **shall** send one email to the
+4.17 By the deadline in 2.2 the student **shall** send one email to the
 teaching assistant, with the subject line
 `ADA 2026 submission — Lastname Firstname`, containing:
 
@@ -116,17 +139,17 @@ teaching assistant, with the subject line
   b. the **full 40-character identifier (SHA) of the commit** being
      submitted.
 
-4.12 The submitted work is **the commit named in 4.11(b)**, and nothing
+4.18 The submitted work is **the commit named in 4.17(b)**, and nothing
 else. Commits made after the deadline are not considered, and changes to
 the repository after the deadline do not change what is graded.
 
-4.13 The teaching team archives each submitted commit shortly after the
+4.19 The teaching team archives each submitted commit shortly after the
 deadline. From that point the archived copy is the record. If the named
 commit cannot be found in the repository at that time — because it was
 never pushed, or because the history was rewritten — the submission is
 treated as not made.
 
-4.14 The student **shall not** remove the repository, make it
+4.20 The student **shall not** remove the repository, make it
 inaccessible, or rewrite its history before the grade is final.
 
 ## 5. Declaration of tools
@@ -211,6 +234,9 @@ hypothesis, tests it honestly and finds no effect **may** receive full
 marks, provided the work and its account are sound. Data or results
 adjusted to produce an effect are academic misconduct.
 
+7.4 The project is assessed as a whole against the factors in 7.2. There
+is no line-by-line allocation of points, and none is issued on request.
+
 ## 8. Publication of project work
 
 8.1 The teaching team **may** publish a project — in whole or in part —
@@ -239,7 +265,7 @@ assistant, **Anna Smirnova** (anna.smirnova@unil.ch).
 ## Open items — decide before publishing
 
 - **[100 %]** — confirm the project still carries the whole grade in 2026.
-- **Tell students about 4.7 early, and more than once.** A GitHub account
+- **Tell students about 4.13 early, and more than once.** A GitHub account
   named `xX_trader_99_Xx` is the normal state of a first-year account, and
   renaming it takes ten seconds — but only if the student knows before
   the deadline that it matters. Put it in the first lecture, in the
@@ -247,7 +273,7 @@ assistant, **Anna Smirnova** (anna.smirnova@unil.ch).
 - **Both dates** — confirm against the Faculty calendar.
 - **Write the archiving script before December** (4.13). It reads the
   submission emails, clones each repository at the named commit, and
-  stores the result with a timestamp. Without it, clause 4.13 is a
+  stores the result with a timestamp. Without it, clause 4.19 is a
   promise the team has to keep by hand at the worst possible time of
   year, and the clause is the only thing standing between a grade and
   "but I pushed the fix on the 21st".

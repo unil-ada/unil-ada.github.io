@@ -10,8 +10,8 @@ are lost here — not in the modelling.
 
 ## Two things to do in the first week
 
-**Put your real name on your GitHub account.** Requirement 4.7 asks for
-your full name in the account's profile name, and Requirement 4.8 says a
+**Put your real name on your GitHub account.** Requirement 4.13 asks for
+your full name in the account's profile name, and Requirement 4.14 says a
 submission that cannot be matched to a registered student is not graded.
 Most student accounts are called something else. Changing it takes ten
 seconds in Settings → Public profile, and it is the single cheapest way
@@ -36,16 +36,66 @@ what happens to be sitting on your desk.
 ## What the repository holds
 
 ```
-paper.pdf              the research paper
-README.md              how to reproduce, in order
-code/                  the scripts and notebooks
-data/                  the data, or how to get it
-figures/               what the paper shows
-recording.mp4          or a link in the README, if the file is large
+paper.pdf                    the research paper
+README.md                    how to reproduce, in order
+requirements.txt             the packages needed
+recording.mp4                or a link in the README, if the file is large
+code/
+  01_get_data.py             or .ipynb — one stage each
+  02_clean.ipynb
+  03_model.ipynb
+  04_figures.ipynb
+  helpers.py                 anything used more than once
+data/                        the data, or the script that fetches it
+figures/                     what the paper shows
 ```
+
+Numbering the files is not required, but it answers "what do I run
+first?" without anyone having to ask.
 
 Use lowercase names with no spaces and no accents. `data final (2).csv`
 breaks on other people's machines; `prices_2020_2024.csv` does not.
+
+## One notebook per stage
+
+Requirement 4.8 says no single file may contain the whole analysis. This
+is the requirement people most often ignore, so here is why it exists.
+
+A 5000-line notebook that loads, cleans, models and plots cannot be
+checked. Nobody can run part of it, nobody can find the line that made a
+number, and nobody — including you, in January — can tell which cells
+were still live and which were abandoned three weeks ago. It also makes
+Requirement 6.1 impossible to satisfy: in one enormous file, no reader
+can tell which parts you wrote.
+
+Split by stage instead: get the data, clean it, model it, make the
+figures. Four files. Each one starts by loading what the previous stage
+saved and ends by saving what the next stage needs.
+
+Rules of thumb, not requirements:
+
+- If a notebook takes more than a couple of minutes to scroll through,
+  it is doing more than one job.
+- If you have copied a function into a second notebook, it belongs in
+  `helpers.py` (Requirement 4.9).
+- If a cell only works when you run the cells above it in a particular
+  order that is not top to bottom, the notebook is broken. Restart the
+  kernel and run all, before you commit.
+
+## Keep the repository clean
+
+Requirement 4.12 excludes caches, checkpoints, virtual environments and
+editor settings. A `.gitignore` handles all of it:
+
+```
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+.DS_Store
+.vscode/
+```
+
+Add it in the first week and you never think about it again.
 
 ## Working with the repository
 
@@ -57,7 +107,7 @@ breaks on other people's machines; `prices_2020_2024.csv` does not.
   look at the repository page in your browser to confirm your work is
   actually there.
 - **Do not commit very large files.** GitHub rejects anything over 100 MB
-  and gets slow well before that. If your data is large, Requirement 4.9
+  and gets slow well before that. If your data is large, Requirement 4.15
   lets you commit the download script instead.
 - **Use a `.gitignore`** for caches, checkpoints and virtual environments
   (`__pycache__/`, `.ipynb_checkpoints/`, `.venv/`). They are noise, and
@@ -98,7 +148,7 @@ Write it as instructions to a stranger, because that is who reads it.
 
 - Small and shareable: include it.
 - Large or licensed: include the download script and say plainly what the
-  licence permits. Requirement 4.9 allows this.
+  licence permits. Requirement 4.15 allows this.
 - Say where every data set came from and what you did to clean it. "I
   dropped 412 rows with missing prices" is a sentence the marker wants
   to read; silence about it is not.
@@ -172,7 +222,7 @@ you handed in.
 
 ## Submitting: the commit identifier
 
-Requirement 4.11 asks you to email the repository URL **and** the commit
+Requirement 4.17 asks you to email the repository URL **and** the commit
 identifier — the SHA. That number is what makes your submission fixed:
 it names one exact state of your work, so nothing you do afterwards can
 change what is graded, and nothing anyone else does can either.
@@ -188,7 +238,7 @@ That prints 40 characters. Copy the whole thing into the email.
 Check it is really on GitHub before you send: open your repository in a
 browser and find that commit. `git push` failing quietly, or a commit
 sitting on a branch that is not the default one, is the usual way this
-goes wrong — and Requirement 4.13 treats a commit that cannot be found
+goes wrong — and Requirement 4.19 treats a commit that cannot be found
 as a submission not made.
 
 You can keep working after you send the email. It changes nothing: the
