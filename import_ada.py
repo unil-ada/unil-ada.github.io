@@ -80,6 +80,16 @@ for i, path in enumerate(DEFS):
         s['groups']=groups; s['materials']=[{'label':'Materials','href':f'materials/week-{wk:02d}/index.html'}]
     sessions.append(s)
 
+# project documents: copy the built PDFs into the site
+_pdir = ROOT/'project'
+for _pdf in ('project-requirements.pdf','project-shipping-guidelines.pdf'):
+    _src = _pdir/_pdf
+    if _src.exists():
+        (ROOT/'materials'/'project').mkdir(parents=True, exist_ok=True)
+        shutil.copy2(_src, ROOT/'materials'/'project'/_pdf)
+    else:
+        print(f'  note: {_pdf} not built yet — run project/build.sh')
+
 # refresher notebooks → resources fragment
 ref = ROOT/'refresher'; ref.mkdir(exist_ok=True)
 def _num(p):
@@ -110,6 +120,10 @@ cfg = {'id':'ada','title':'Advanced Data Analytics','tagline':'Machine learning 
           {'h':'Prerequisites','p':'Python basics','note':'<a href="resources.html">Refresher notebooks</a> if you need them'},
           {'h':'Compute','p':'<a href="https://nuvolos.cloud">Nuvolos</a> cloud workspaces','note':'Free for enrolled students'}],
  'nuvolos':{'enroll_url':'https://app.nuvolos.cloud','login_url':'https://app.nuvolos.cloud','blurb':'VS Code and JupyterLab in the browser — nothing to install. Enroll with your UNIL email once; then log in from any computer.'},
- 'assessment_html':'assessment.html.frag','resources_html':'resources.html.frag','sessions':sessions}
+ 'assessment_html':'assessment.html.frag','resources_html':'resources.html.frag',
+ 'pages':[{'slug':'project','label':'Project','title':'The semester project',
+           'tagline':'One project, carried out individually — the whole assessment for this course.',
+           'html':'project.html.frag'}],
+ 'sessions':sessions}
 yaml.safe_dump(cfg, open(ROOT/'course.yaml','w'), allow_unicode=True, sort_keys=False, width=100)
 subprocess.run([sys.executable, str(GEN), str(ROOT/'course.yaml'), str(ROOT)], check=True)

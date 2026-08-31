@@ -33,6 +33,12 @@ nuvolos:
     then log in from any computer.
 assessment_html: assessment.html.frag
 resources_html: resources.html.frag
+pages:
+- slug: project
+  label: Project
+  title: The semester project
+  tagline: One project, carried out individually — the whole assessment for this course.
+  html: project.html.frag
 sessions:
 - n: 1
   date: '2026-09-14'
