@@ -133,10 +133,39 @@ Nobody is penalised for using assistants — the course teaches you to. The
 penalty is for not declaring them, and for being unable to explain what
 you handed in.
 
+## Submitting: the commit identifier
+
+Requirement 4.11 asks you to email the repository URL **and** the commit
+identifier — the SHA. That number is what makes your submission fixed:
+it names one exact state of your work, so nothing you do afterwards can
+change what is graded, and nothing anyone else does can either.
+
+To get it, once everything is committed and pushed:
+
+```
+git log -1 --format=%H
+```
+
+That prints 40 characters. Copy the whole thing into the email.
+
+Check it is really on GitHub before you send: open your repository in a
+browser and find that commit. `git push` failing quietly, or a commit
+sitting on a branch that is not the default one, is the usual way this
+goes wrong — and Requirement 4.13 treats a commit that cannot be found
+as a submission not made.
+
+You can keep working after you send the email. It changes nothing: the
+commit you named is the one that is graded. What you must not do is
+delete the repository, make it private to us, or rewrite the history —
+that removes the commit you submitted.
+
 ## The week before the deadline
 
 - Run the reproduction test above. Now, not on the last evening.
 - Check the page count against Requirement 4.2.
 - Check the eight required sections are present and in order.
-- Submit a first version early. You can replace it; you cannot create it
-  after the deadline.
+- Send the submission email a day early with the SHA of what you have.
+  If you improve the work afterwards, send a second email with a new SHA
+  before the deadline; the last one before the deadline is the one that
+  counts. An email you have already sent is worth more than a perfect
+  one you were about to send.

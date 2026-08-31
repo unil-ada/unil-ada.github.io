@@ -53,9 +53,10 @@ proposal within **[five]** working days of being notified.
 
 ## 4. What is submitted
 
-4.1 The project **shall** be submitted as a **Git repository hosted on
-GitHub**. Submission by email, by Moodle, or by any other means is not
-accepted.
+4.1 The work **shall** be delivered as a **Git repository hosted on
+GitHub**. Files sent as email attachments, uploaded to Moodle, or shared
+by any other means are not the submission and are not graded. Email is
+used only to notify the teaching team, as set out in 4.11.
 
 4.2 The repository **shall** contain:
 
@@ -107,13 +108,26 @@ can be obtained, together with a statement of the licence.
 added as a collaborator]**, and **shall** remain accessible to the
 teaching team until the grade is final.
 
-4.11 The repository URL **shall** be sent by email to the teaching
-assistant by the deadline in 2.2, with the subject line
-`ADA 2026 submission — Lastname Firstname`.
+4.11 By the deadline in 2.2 the student **shall** send one email to the
+teaching assistant, with the subject line
+`ADA 2026 submission — Lastname Firstname`, containing:
 
-4.12 The submission is the **last commit on the default branch made
-before the deadline** in 2.2. Later commits are not considered. The
-teaching team records that commit's identifier when grading begins.
+  a. the repository URL; and
+  b. the **full 40-character identifier (SHA) of the commit** being
+     submitted.
+
+4.12 The submitted work is **the commit named in 4.11(b)**, and nothing
+else. Commits made after the deadline are not considered, and changes to
+the repository after the deadline do not change what is graded.
+
+4.13 The teaching team archives each submitted commit shortly after the
+deadline. From that point the archived copy is the record. If the named
+commit cannot be found in the repository at that time — because it was
+never pushed, or because the history was rewritten — the submission is
+treated as not made.
+
+4.14 The student **shall not** remove the repository, make it
+inaccessible, or rewrite its history before the grade is final.
 
 ## 5. Declaration of tools
 
@@ -180,6 +194,12 @@ assistant, **Anna Smirnova** (anna.smirnova@unil.ch).
   the deadline that it matters. Put it in the first lecture, in the
   proposal sign-off email, and in the Moodle announcement.
 - **Both dates** — confirm against the Faculty calendar.
+- **Write the archiving script before December** (4.13). It reads the
+  submission emails, clones each repository at the named commit, and
+  stores the result with a timestamp. Without it, clause 4.13 is a
+  promise the team has to keep by hand at the worst possible time of
+  year, and the clause is the only thing standing between a grade and
+  "but I pushed the fix on the 21st".
 - **Repository access (4.10)** — private with the TA as collaborator, or
   public? Private protects student work but means adding each student by
   hand. Public is no work at all, and is defensible here because the
