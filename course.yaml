@@ -11,12 +11,13 @@ resources_label: Python refresher &amp; resources
 resources_title: Python refresher &amp; resources
 resources_tagline: Twelve short notebooks, readable in the browser — from calculator to pandas.
 assessment_tagline: Provisional — confirmed at semester start.
-schedule_note: Dates are the provisional 2026 calendar; materials are the current course corpus and may
-  be updated week by week.
+schedule_note: 'Each Monday has two meetings: the lecture at 12:30 and the exercise session at 16:30.
+  Dates are the provisional 2026 calendar; materials are the current course corpus and may be updated
+  week by week.'
 facts:
 - h: Meets
   p: Mondays, from 14 September
-  note: Time and room confirmed before the first session · 2026 dates provisional
+  note: Lecture 12:30–14:00 · exercise session 16:30–18:00 · rooms confirmed before the first session
 - h: Grading
   p: Final project
   note: Details confirmed at semester start
