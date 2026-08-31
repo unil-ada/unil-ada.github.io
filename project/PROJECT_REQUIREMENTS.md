@@ -152,6 +152,33 @@ treated as not made.
 4.20 The student **shall not** remove the repository, make it
 inaccessible, or rewrite its history before the grade is final.
 
+### Computing resources
+
+4.21 A cloud workspace is provided free of charge to every enrolled
+student for the duration of the course. **It is the only computing
+resource provided.** No other hardware, cloud credit, licence or service
+is supplied, funded or arranged by the University for this project.
+
+4.22 The project **shall** be scoped so that it can be carried out with
+the provided workspace. A question that cannot be answered within those
+resources is out of scope, and the proposal (section 3) is where that is
+settled.
+
+4.23 A student **may** use other computing resources, at their own
+arrangement and expense. Doing so is neither required nor rewarded: under
+7.2 the work is assessed, not the hardware it ran on.
+
+4.24 The README **shall** state what is needed to run the code: the
+approximate running time, and any resource beyond the provided workspace.
+
+4.25 Where a result genuinely cannot be reproduced in the provided
+workspace, the repository **shall** contain the code that produced it,
+the saved output, and a statement of what it was run on. Requirement 4.11
+is met by that record.
+
+4.26 The cost, availability or failure of any computing resource other
+than the provided workspace is **not** grounds for an extension.
+
 ## 5. Declaration of tools
 
 5.1 Generative AI tools and code assistants **may** be used for writing

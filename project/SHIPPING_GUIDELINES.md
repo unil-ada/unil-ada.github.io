@@ -171,6 +171,42 @@ Write it as instructions to a stranger, because that is who reads it.
   usual failure, and it cannot be fixed after the deadline.
 - Say your name at the start.
 
+## Compute: what you get, and scoping to it
+
+You get a Nuvolos workspace, free, for the whole course. That is the only
+compute the University provides for this project — there are no cloud
+credits, no GPU allocation, and no licences beyond what is already in the
+workspace.
+
+The workspace is modest and deliberately so: it is enough for the methods
+this course teaches, applied to data of a sensible size. Almost every
+good project fits in it comfortably.
+
+**Scope to it at proposal stage, not in December.** If your idea needs to
+fine-tune a large model or grid-search for two days, it is out of scope
+(Requirement 4.22), and the proposal is where we say so — which is the
+whole point of asking for a proposal. Bring the question then, not after
+you have spent three weeks on it.
+
+Ways a project shrinks to fit without becoming trivial:
+
+- take a sample of the data rather than all of it, and say so in the paper;
+- use fewer, better-chosen parameter settings instead of a large search;
+- pick the smaller model. A well-understood small model beats a large one
+  you could not inspect.
+
+**If you use your own compute**, you may — at your own cost, and it earns
+you nothing. Requirement 7.2 assesses the work, not the hardware. Two
+practical obligations come with it: say in the README what you ran it on
+and roughly how long it took (Requirement 4.24), and if the result cannot
+be reproduced in the workspace, commit the code, the saved output, and a
+note of what produced it (Requirement 4.25). A number nobody can trace
+back to code is not evidence.
+
+And note Requirement 4.26: a machine you rented failing, or running out
+of credit, is not a reason for an extension. The workspace you were given
+does not have that failure mode.
+
 ## Code you did not write
 
 Section 6 of the Requirements is the one people get wrong, so here is the
