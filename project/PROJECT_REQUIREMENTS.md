@@ -38,31 +38,42 @@ extension is granted except as provided by Faculty regulation.
 3.1 The proposal **shall** be a text of at most **200 words** stating the
 research question, the data to be used, and the methods to be applied.
 
-3.2 A project **may not** be undertaken before the teaching team has
-signed off the proposal. Sign-off confirms that the scope and complexity
-are appropriate; it is not an assessment of the project.
+3.2 The proposal **shall** be sent by email to the teaching assistant
+(section 8) by the deadline in 2.1, with the subject line
+`ADA 2026 proposal — Lastname Firstname`.
 
-3.3 A student whose proposal is not signed off **shall** submit a revised
+3.3 Approval is given by return email. That email is the sign-off.
+
+3.4 A project **may not** be undertaken before the sign-off has been
+received. Sign-off confirms that the scope and complexity are
+appropriate; it is not an assessment of the project.
+
+3.5 A student whose proposal is not approved **shall** send a revised
 proposal within **[five]** working days of being notified.
 
 ## 4. What is submitted
 
-4.1 The submission **shall** consist of four parts:
+4.1 The project **shall** be submitted as a **Git repository hosted on
+GitHub**. Submission by email, by Moodle, or by any other means is not
+accepted.
+
+4.2 The repository **shall** contain:
 
   a. a **research paper** in PDF;
-  b. the **data** used, or, where 4.6 applies, the code and instructions
+  b. the **data** used, or, where 4.9 applies, the code and instructions
      that obtain it;
   c. the **source code** that produces the results;
   d. a **recording** of approximately **15 minutes** presenting the
-     project.
+     project, or a working link to it where the file is too large to
+     store in the repository.
 
-4.2 The paper **shall** be about **10 pages**, and **not fewer than 8
+4.3 The paper **shall** be about **10 pages**, and **not fewer than 8
 pages** excluding references.
 
-4.3 The paper **shall** be typeset in the **SIAM conference style**
+4.4 The paper **shall** be typeset in the **SIAM conference style**
 provided with this document.
 
-4.4 The paper **shall** contain the following sections, in this order:
+4.5 The paper **shall** contain the following sections, in this order:
 
   1. Abstract
   2. Introduction
@@ -74,13 +85,35 @@ provided with this document.
   8. Conclusion
   9. Appendix: declaration of tools used (see section 5)
 
-4.5 Further sections **may** be added where the project warrants them.
+4.6 Further sections **may** be added where the project warrants them.
 
-4.6 Where licence or size prevents submitting the data itself, the
-student **shall** submit the code and instructions by which the data can
-be obtained, together with a statement of the licence.
+### Identification
 
-4.7 The submission **shall** be made through **[the course Moodle]**.
+4.7 The GitHub account used **shall** display the student's **full name**
+as registered at the University, in the account's profile name.
+
+4.8 A submission from an account that cannot be matched to a registered
+student is **not graded**. The teaching team is not required to guess who
+an account belongs to, and a pseudonymous account with no full name is
+the student's own failure to submit identifiably.
+
+### Access and timing
+
+4.9 Where licence or size prevents including the data itself, the
+repository **shall** contain the code and instructions by which the data
+can be obtained, together with a statement of the licence.
+
+4.10 The repository **shall** be **[private, with the teaching assistant
+added as a collaborator]**, and **shall** remain accessible to the
+teaching team until the grade is final.
+
+4.11 The repository URL **shall** be sent by email to the teaching
+assistant by the deadline in 2.2, with the subject line
+`ADA 2026 submission — Lastname Firstname`.
+
+4.12 The submission is the **last commit on the default branch made
+before the deadline** in 2.2. Later commits are not considered. The
+teaching team records that commit's identifier when grading begins.
 
 ## 5. Declaration of tools
 
@@ -88,7 +121,7 @@ be obtained, together with a statement of the licence.
 code and prose.
 
 5.2 Every such tool used **shall** be listed in the appendix required by
-4.4(9), with a statement of what it was used for.
+4.5(9), with a statement of what it was used for.
 
 5.3 An undeclared tool is a breach of these requirements and is treated
 as academic misconduct under Faculty regulation.
@@ -141,11 +174,18 @@ assistant, **Anna Smirnova** (anna.smirnova@unil.ch).
 ## Open items — decide before publishing
 
 - **[100 %]** — confirm the project still carries the whole grade in 2026.
+- **Tell students about 4.7 early, and more than once.** A GitHub account
+  named `xX_trader_99_Xx` is the normal state of a first-year account, and
+  renaming it takes ten seconds — but only if the student knows before
+  the deadline that it matters. Put it in the first lecture, in the
+  proposal sign-off email, and in the Moodle announcement.
 - **Both dates** — confirm against the Faculty calendar.
-- **Submission via Moodle** — 2025 collected submissions by email to the
-  TAs. At this cohort size email loses files, has no timestamp anyone can
-  audit, and gives no receipt to the student. Moodle solves all three and
-  is where an appeal will look. Confirm the assignment is created.
+- **Repository access (4.10)** — private with the TA as collaborator, or
+  public? Private protects student work but means adding each student by
+  hand. Public is no work at all, and is defensible here because the
+  project is individual and the paper is the graded artifact — but it
+  makes every submission visible to every other student while they are
+  still working.
 - **Clause 7** is new. It exists because a project gallery cannot be built
   from work submitted without permission to publish it. Consent must be
   collected in the same act as submission, this year — it cannot be

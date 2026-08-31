@@ -8,32 +8,63 @@ are lost here — not in the modelling.
 
 ---
 
+## Two things to do in the first week
+
+**Put your real name on your GitHub account.** Requirement 4.7 asks for
+your full name in the account's profile name, and Requirement 4.8 says a
+submission that cannot be matched to a registered student is not graded.
+Most student accounts are called something else. Changing it takes ten
+seconds in Settings → Public profile, and it is the single cheapest way
+to avoid losing a grade you have earned.
+
+**Make the repository now, not in December.** An empty repository with a
+README costs nothing and means the last week is about the work.
+
 ## The test that matters
 
 Before you submit, do this on a machine that is not the one you worked on:
 
-1. Download your own submission, as a marker would.
-2. Unzip it into an empty folder.
-3. Follow your own README exactly as written, changing nothing.
-4. See whether the results in your paper appear.
+1. `git clone` your own repository into an empty folder.
+2. Follow your own README exactly as written, changing nothing.
+3. See whether the results in your paper appear.
 
-If step 4 fails, you have found what the marker would have found. Almost
-every problem below is caught by this one test.
+If step 3 fails, you have found what the marker would have found. Almost
+every problem below is caught by this one test. Cloning is the honest
+version of the test: it shows you only what you actually committed, not
+what happens to be sitting on your desk.
 
-## What to hand over
+## What the repository holds
 
 ```
-lastname_firstname/
-  paper.pdf              the research paper
-  README.md              how to reproduce, in order
-  code/                  the scripts and notebooks
-  data/                  the data, or how to get it
-  figures/               what the paper shows
-  recording.mp4          or a link, if the file is large
+paper.pdf              the research paper
+README.md              how to reproduce, in order
+code/                  the scripts and notebooks
+data/                  the data, or how to get it
+figures/               what the paper shows
+recording.mp4          or a link in the README, if the file is large
 ```
 
 Use lowercase names with no spaces and no accents. `data final (2).csv`
 breaks on other people's machines; `prices_2020_2024.csv` does not.
+
+## Working with the repository
+
+- **Commit as you go.** A commit a day is a record of your work. One
+  enormous commit on the last evening is a record of nothing, and it is
+  also when things go wrong.
+- **What counts is the last commit before the deadline** (Requirement
+  4.12). Committing is not the same as pushing: run `git push` and then
+  look at the repository page in your browser to confirm your work is
+  actually there.
+- **Do not commit very large files.** GitHub rejects anything over 100 MB
+  and gets slow well before that. If your data is large, Requirement 4.9
+  lets you commit the download script instead.
+- **Use a `.gitignore`** for caches, checkpoints and virtual environments
+  (`__pycache__/`, `.ipynb_checkpoints/`, `.venv/`). They are noise, and
+  they make the repository heavy.
+- **Never commit a key or a password.** Deleting it in a later commit
+  does not remove it: it stays in the history. If it happens, tell us and
+  revoke the key.
 
 ## The README
 
