@@ -98,7 +98,7 @@ Write it as instructions to a stranger, because that is who reads it.
 
 - Small and shareable: include it.
 - Large or licensed: include the download script and say plainly what the
-  licence permits. Requirement 4.6 allows this.
+  licence permits. Requirement 4.9 allows this.
 - Say where every data set came from and what you did to clean it. "I
   dropped 412 rows with missing prices" is a sentence the marker wants
   to read; silence about it is not.
@@ -110,7 +110,7 @@ Write it as instructions to a stranger, because that is who reads it.
 - Every figure needs axis labels, units, and a caption saying what to
   look at.
 - Report what you actually ran. If a method failed, that belongs in the
-  paper — Requirement 6.3 lets an honest negative result score full marks.
+  paper — Requirement 7.3 lets an honest negative result score full marks.
 
 ## The recording
 
@@ -120,6 +120,43 @@ Write it as instructions to a stranger, because that is who reads it.
 - Watch the first minute back before submitting. Inaudible sound is the
   usual failure, and it cannot be fixed after the deadline.
 - Say your name at the start.
+
+## Code you did not write
+
+Section 6 of the Requirements is the one people get wrong, so here is the
+short version.
+
+You do not attribute libraries. `import pandas` is using a tool.
+
+You do attribute anything you did not write yourself: a function from
+Stack Overflow, a plotting recipe from a blog, a chunk of a repository, a
+replication package from a paper. One comment where it appears is enough:
+
+```python
+# adapted from https://github.com/someone/repo, MIT licence
+def rolling_sharpe(returns, window):
+    ...
+```
+
+Then list it in the appendix with the licence. That is the whole job, and
+it takes about a minute.
+
+**Where it gets awkward: assistants.** When ChatGPT writes a function, it
+sometimes reproduces code that already exists somewhere, and does not
+tell you. You cannot check this, and you are not expected to. What you
+can do is say the function came from an assistant and what you asked for.
+If someone later recognises the code, that declaration is the difference
+between an honest mistake and a misconduct case. It is a minute's work
+buying a great deal of protection.
+
+**The test to apply**: for every block of code, can you say where it came
+from? If the answer is "no idea, it has been in the folder for weeks",
+that block cannot be attributed — and Requirement 6.7 says it should not
+be submitted. Rewrite it or find the source again.
+
+Attribution never costs you marks. Requirement 6.9 is explicit: what is
+assessed is what you built with the code, and the offence is the silence,
+not the borrowing.
 
 ## Declaring your tools
 
@@ -162,7 +199,7 @@ that removes the commit you submitted.
 ## The week before the deadline
 
 - Run the reproduction test above. Now, not on the last evening.
-- Check the page count against Requirement 4.2.
+- Check the page count against Requirement 4.3.
 - Check the eight required sections are present and in order.
 - Send the submission email a day early with the SHA of what you have.
   If you improve the work afterwards, send a second email with a new SHA

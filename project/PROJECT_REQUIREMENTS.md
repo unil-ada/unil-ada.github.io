@@ -39,7 +39,7 @@ extension is granted except as provided by Faculty regulation.
 research question, the data to be used, and the methods to be applied.
 
 3.2 The proposal **shall** be sent by email to the teaching assistant
-(section 8) by the deadline in 2.1, with the subject line
+(section 9) by the deadline in 2.1, with the subject line
 `ADA 2026 proposal — Lastname Firstname`.
 
 3.3 Approval is given by return email. That email is the sign-off.
@@ -144,43 +144,94 @@ as academic misconduct under Faculty regulation.
 submitted. Being unable to explain submitted work is assessed as the
 student's own failure to meet 6.1.
 
-## 6. Assessment
+## 6. Code the student did not write
 
-6.1 The project is assessed on the evidence it gives that the student can
+6.1 A reader **shall** be able to establish, for any part of the
+submission, whether the student wrote it and, if not, where it came from.
+This is the whole of the requirement; the clauses below say how to meet
+it.
+
+6.2 **No attribution is needed** for published libraries and packages
+used as intended. Calling `pandas`, `scikit-learn` or `matplotlib` is
+using a tool, not reusing someone's work.
+
+6.3 **Material from this course** — lecture notebooks, exercise
+solutions, demonstration code — **may** be reused freely and **shall** be
+identified where it is used. No licence statement is needed for it.
+
+6.4 **Everything else the student did not write shall be attributed**
+where it appears, by a comment naming the source and, where one exists, a
+link; and listed in the appendix required by 4.5(9). This covers code
+from repositories, articles, forums, answers, textbooks, replication
+packages accompanying papers, and any other person.
+
+6.5 Reused code **shall** be permitted by its licence, and that licence
+**shall** be named in the appendix. Code whose licence does not permit
+the use is not submitted.
+
+6.6 **Code produced by a generative tool** is attributed by naming the
+tool and what it was asked to produce. The student remains responsible
+for that code, including where the tool reproduced existing work without
+saying so. Where such code is later identified, this declaration is what
+separates an honest mistake from misconduct — which is the practical
+reason to make it.
+
+6.7 **Code whose origin the student cannot state shall not be
+submitted.** If it was copied from a source that is no longer remembered,
+or inherited from someone else's file, it cannot be attributed, and
+therefore cannot appear in the submission.
+
+6.8 **Not permitted in any circumstance:** code taken from another
+student's project in this course, and code taken from a project submitted
+in a previous year.
+
+6.9 **Attribution costs no marks.** Declared reuse is assessed on what
+the student built with it. Undeclared reuse is academic misconduct under
+Faculty regulation, whatever its size — the offence is the silence, not
+the borrowing.
+
+6.10 A project that is substantially an existing analysis re-run on
+different data is **not** misconduct where it is declared under 6.4. It
+is assessed under 7.2(b) and 7.2(c) as a project of limited complexity
+and originality.
+
+## 7. Assessment
+
+7.1 The project is assessed on the evidence it gives that the student can
 apply what was taught in the course.
 
-6.2 Assessment weighs three factors:
+7.2 Assessment weighs three factors:
 
   a. compliance with sections 2 to 5;
   b. the **complexity** of the project;
   c. the **originality** of the project and of its presentation.
 
-6.3 **Negative results are acceptable.** A project that states a
+7.3 **Negative results are acceptable.** A project that states a
 hypothesis, tests it honestly and finds no effect **may** receive full
 marks, provided the work and its account are sound. Data or results
 adjusted to produce an effect are academic misconduct.
 
-## 7. Publication of project work
+## 8. Publication of project work
 
-7.1 The teaching team **may** publish a project — in whole or in part —
+8.1 The teaching team **may** publish a project — in whole or in part —
 on the course website, **only** with the student's written consent.
 
-7.2 Consent is **optional**. It is given or withheld at submission, has
+8.2 Consent is **optional**. It is given or withheld at submission, has
 no effect on the grade, and the choice is not visible to the assessor
 before the grade is recorded.
 
-7.3 Consent **may** be withdrawn at any time, in writing, without giving
+8.3 Consent **may** be withdrawn at any time, in writing, without giving
 a reason. The material is then removed from the website.
 
-7.4 Published work is credited to its author unless the student requests
+8.4 Published work is credited to its author unless the student requests
 publication without their name.
 
-## 8. Questions
+## 9. Questions
 
-8.1 Questions about these requirements are directed to the teaching
+9.1 Questions about these requirements are directed to the teaching
 assistant, **Anna Smirnova** (anna.smirnova@unil.ch).
 
-8.2 The course is taught by **Prof. Dimitrios Karyampas**
+9.2 The course is taught by **Prof. Dimitrios Karyampas**
 (dimitrios.karyampas@unil.ch).
 
 ---
@@ -206,7 +257,7 @@ assistant, **Anna Smirnova** (anna.smirnova@unil.ch).
   project is individual and the paper is the graded artifact — but it
   makes every submission visible to every other student while they are
   still working.
-- **Clause 7** is new. It exists because a project gallery cannot be built
+- **Clause 8** is new. It exists because a project gallery cannot be built
   from work submitted without permission to publish it. Consent must be
   collected in the same act as submission, this year — it cannot be
   obtained retroactively once students have finished the course and gone.
