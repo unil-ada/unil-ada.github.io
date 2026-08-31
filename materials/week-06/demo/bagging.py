@@ -23,7 +23,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 tree = DecisionTreeClassifier(criterion='entropy', max_depth=2)
 
 # bagging classifier based on 10 decision trees
-bc = BaggingClassifier(base_estimator=tree, n_estimators=10)
+bc = BaggingClassifier(estimator=tree, n_estimators=10)
 bc.fit(X_train, y_train)
 bc_y_predicted = bc.predict(X_test)
 print(accuracy_score(y_true=y_test, y_pred=bc_y_predicted)) # 0.6455696202531646
