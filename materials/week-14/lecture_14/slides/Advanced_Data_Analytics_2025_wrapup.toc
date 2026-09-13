@@ -1,0 +1,9 @@
+\beamer@sectionintoc {1}{Part I: The Journey}{3}{0}{1}
+\beamer@sectionintoc {2}{Part II: Core Concepts Recap}{8}{0}{2}
+\beamer@subsectionintoc {2}{1}{Supervised Learning}{9}{0}{2}
+\beamer@subsectionintoc {2}{2}{Deep Learning}{14}{0}{2}
+\beamer@subsectionintoc {2}{3}{Probabilistic Methods}{18}{0}{2}
+\beamer@subsectionintoc {2}{4}{Unsupervised Learning \& RL}{21}{0}{2}
+\beamer@sectionintoc {3}{Part III: Connecting the Dots}{24}{0}{3}
+\beamer@sectionintoc {4}{Part IV: Looking Ahead}{29}{0}{4}
+\beamer@sectionintoc {5}{Closing}{34}{0}{5}
