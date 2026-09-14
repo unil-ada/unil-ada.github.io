@@ -1,0 +1,78 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your workspace on Nuvolos — Advanced Data Analytics, UNIL HEC Lausanne</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png"></head><body>
+<header class="sig"><div class="wrap">
+<img src="assets/logos/unil-logo-blue.svg" alt="UNIL — Université de Lausanne"><span class="fac">HEC Lausanne</span>
+<span class="sem">Autumn semester 2026</span></div></header>
+<nav class="nav"><div class="wrap"><a href="index.html">Schedule</a><a href="assessment.html">Assessment</a><a href="project.html">Project</a><a href="nuvolos.html" aria-current="page">Workspace</a><a class="ext" href="https://moodle.unil.ch" target="_blank" rel="noopener">Moodle</a><a href="resources.html">Python refresher &amp; resources</a></div></nav>
+<div class="wk-mast"><div class="wrap"><p class="crumb"><a href="index.html">Advanced Data Analytics</a> · Your workspace on Nuvolos</p>
+<h1>Your workspace on Nuvolos</h1><p class="q">Enrol once, log in every time, start JupyterLab — everything is installed, nothing runs on your laptop.</p></div></div>
+<main><div class="wrap"><h2 class="sect">Getting in</h2>
+<dl class="mats">
+  <div class="row"><dt>Two links</dt>
+    <dd>One to enrol, once; another to log in, every time
+      <span class="ms">The <a href="https://app.eu1.nuvolos.cloud/enroll/class/EcQWpcx0Kr4">enrolment link</a> adds you to the course space. Use it exactly once. After that, go to <a href="https://app.nuvolos.cloud">app.nuvolos.cloud</a> and sign in. The enrolment link is not the login page: opening it again does nothing useful, and it will not take you to your workspace.</span></dd></div>
+  <div class="row"><dt>Which email</dt>
+    <dd>The one you use for Moodle
+      <span class="ms">Register with the same address you use for Moodle, so we can match you to the class list. Exchange students: your home university's address, if that is what Moodle has. Not a private address. If you already have a Nuvolos account on another email, enrol with that account anyway and tell the teaching assistant which address it is.</span></dd></div>
+  <div class="row"><dt>First login</dt>
+    <dd>Organisation, space, instance
+      <span class="ms">Nuvolos is organised as HEC Lausanne &rarr; Advanced Data Analytics 2026 &rarr; your own instance, named after your email. Everything you do lives in that instance. Nobody else sees it, and nothing you do there affects anyone else.</span></dd></div>
+  <div class="row"><dt>Nothing to install</dt>
+    <dd>Everything runs in the browser
+      <span class="ms">No Python, no Anaconda, no packages on your laptop. Any machine with a browser will do. Your files persist between sessions and across devices.</span></dd></div>
+</dl>
+
+<h2 class="sect">Starting to work</h2>
+<dl class="mats">
+  <div class="row"><dt>Start JupyterLab</dt>
+    <dd>Applications, then the power button next to JupyterLab
+      <span class="ms">In the left-hand column of your instance, open <em>Applications</em>. The course application is <em>JupyterLab 4.5.0 with Python 3.12 and TeX Live</em>, and every package used in the course is already installed in it. Click its name or the power button; the first start takes a minute, later ones a few seconds. It opens in a new tab.</span></dd></div>
+  <div class="row"><dt>If no application is listed</dt>
+    <dd>Add it once from the catalogue
+      <span class="ms">Click the plus next to <em>Applications</em>, search for <em>JupyterLab</em>, and add the entry that says <em>Python 3.12 and TeX Live</em>. Then start it as above. If a package is missing when you run a notebook, <code>pip install &lt;name&gt;</code> in a terminal installs it into your workspace, and tell the teaching assistant so it is added for everyone.</span></dd></div>
+  <div class="row"><dt>Your files</dt>
+    <dd><code>/files</code> is your workspace; JupyterLab opens in it
+      <span class="ms">The file browser on the left of JupyterLab shows the same folders as <em>Files</em> in the Nuvolos sidebar. You will find <code>README.md</code>, the guide to the workspace, and <code>refresher/</code>. Week folders appear after each Monday's session.</span></dd></div>
+  <div class="row"><dt>Open a notebook</dt>
+    <dd>Go into its folder first, then double-click it
+      <span class="ms">Every notebook expects to be run from the folder it lives in, so that its data files are found. Run cells with Shift+Enter. If a notebook misbehaves, <em>Kernel &rarr; Restart Kernel and Run All Cells</em> is the first thing to try.</span></dd></div>
+  <div class="row"><dt>The refresher</dt>
+    <dd>Twelve short notebooks, from calculator to pandas
+      <span class="ms">In <code>refresher/</code>. If you have not written Python for a while, work through them this week and next, in order; they are also <a href="resources.html">readable here</a>. Nothing is submitted.</span></dd></div>
+</dl>
+
+<h2 class="sect">Two rules and a habit</h2>
+<dl class="mats">
+  <div class="row"><dt>Week folders get overwritten</dt>
+    <dd>Keep your own work outside them
+      <span class="ms">When material for a week is updated, the whole <code>week-NN/</code> folder is replaced, and your edits inside it are gone. Copy a notebook to a folder of your own (<code>my-work/</code>, for example) before you change it.</span></dd></div>
+  <div class="row"><dt>Stop the application when you are done</dt>
+    <dd>Power button in <em>Applications</em>
+      <span class="ms">Your files are saved continuously; stopping the application loses nothing. It frees the compute that the course is given for free, and it avoids the "already running elsewhere" message when you log in from another machine.</span></dd></div>
+  <div class="row"><dt>A terminal is one click away</dt>
+    <dd>File &rarr; New &rarr; Terminal, inside JupyterLab
+      <span class="ms">For <code>pip</code>, <code>git</code>, and running scripts. The project you will build later is a git repository; the terminal here is where it can live and run.</span></dd></div>
+</dl>
+
+<h2 class="sect">When something is wrong</h2>
+<dl class="mats">
+  <div class="row"><dt>"You are not a member of this space"</dt>
+    <dd>You logged in with a different account than you enrolled with
+      <span class="ms">Log out, and sign in with the address you used on the enrolment link. If you cannot remember which, email the teaching assistant with both addresses.</span></dd></div>
+  <div class="row"><dt>The workspace is empty</dt>
+    <dd>Material arrives by distribution, sometimes minutes after enrolment
+      <span class="ms">Refresh the <em>Files</em> view. If <code>README.md</code> and <code>refresher/</code> are still not there an hour after enrolling, email the teaching assistant; everything is also downloadable from this site in the meantime.</span></dd></div>
+  <div class="row"><dt>Anything else</dt>
+    <dd>anna.smirnova@unil.ch
+      <span class="ms">Say what you clicked and what you saw; a screenshot helps more than a description.</span></dd></div>
+</dl>
+<nav class="pager"><a href="index.html"><span class="lbl">← Back</span><b>Course overview and schedule</b></a><a href="resources.html" class="next"><span class="lbl">Next →</span><b>Python refresher &amp; resources</b></a></nav></div></main>
+<footer><div class="wrap"><img src="assets/logos/unil-logo-white.svg" alt="UNIL">
+<span>HEC Lausanne · Autumn 2026</span>
+<a href="mailto:anna.smirnova@unil.ch">Contact the team</a>
+<span class="nuv"><!-- Nuvolos branding required (free compute credits) — do not remove -->Compute by <a href="https://nuvolos.cloud">Nuvolos</a></span></div></footer>
+<script src="site.js"></script></body></html>
